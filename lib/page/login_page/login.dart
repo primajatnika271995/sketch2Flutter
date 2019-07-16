@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:zeplin2dart/page/menu.dart';
 
 class Login extends StatefulWidget {
   @override
@@ -292,6 +293,8 @@ class _LoginState extends State<Login> with SingleTickerProviderStateMixin {
       child: RaisedButton(
         onPressed: () {
           print('_submited!');
+          Navigator.of(context)
+              .push(MaterialPageRoute(builder: (context) => Menu()));
         },
         child: Text(
           'Sign in',
